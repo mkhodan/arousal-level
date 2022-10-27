@@ -1,0 +1,22 @@
+<head>
+	<title>Рівень збудження</title>
+</head>
+<body>
+	<div class="wrapper">
+		<p class="wrapper__description">Рівень збудження</p>
+		<input type="range" min="0" max="8" step="1" value="0" id="range">
+		<input type="number" min="0" max="8" step="1" value="0" id="input">
+	</div>
+
+	<script>
+		let range = document.getElementById('range');
+		let input = document.getElementById('input');
+
+		range.addEventListener('input', () => {
+			input.value = range.value;
+		});
+		input.addEventListener('input', () => {
+			range.value = input.value;
+		});
+	</script>
+</body>
